@@ -216,7 +216,7 @@
 <script>
 import TpButton from './common/TpButton.vue'
 
-const KEEP_CACHE = true
+const FORCE_CACHE = false
 const PAYSLIP_TYPES = {
   'weekly': {
     label: 'Weekly',
@@ -492,7 +492,7 @@ export default {
           clear = {}
         }
         const user = clear.user
-        if (user != this.getUser() && !KEEP_CACHE) {
+        if (user != this.getUser() && !FORCE_CACHE) {
           this.clear()
           this.data.type = this.incomeType != '' ? this.incomeType : DEFAULT_TYPE
           console.log(`* INCOME CALCULATOR: Invalidated cache (cached user ${user}; processing user ${this.getUser()})`)
