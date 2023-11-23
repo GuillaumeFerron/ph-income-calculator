@@ -11,7 +11,7 @@ export default {
   name: 'App',
   components: {
     IncomeCalculator
-}
+  }
 }
 </script>
 
@@ -23,5 +23,6 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: grey;
+    min-height: 100vh;
   }
 </style>
