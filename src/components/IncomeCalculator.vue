@@ -75,7 +75,7 @@
             </div>
             <div class="row flex-column align-items-end justify-content-end px-0">
               <h4>Total</h4>
-              <h5 class="text-secondary pr-0 text-right mb-0 font-bold">{{ (totalIncome + subtotalDeminimis) | currencyFormat }}</h5>
+              <h5 class="text-secondary pr-0 text-right mb-0 font-bold">{{ totalIncome | currencyFormat }}</h5>
             </div>
             <div class="divider mt-3"></div>
             <h3 class="mt-4">TAXES</h3>
