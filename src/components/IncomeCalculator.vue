@@ -52,9 +52,9 @@
               <h5 class="text-secondary col-3 pr-0 text-right mb-0">{{ subtotalNightShift | currencyFormat }}</h5>
             </div>
             <div class="row px-0 mt-1">
-              <h5 class="col-4">Tardiness</h5>
+              <h5 class="col-4">Tardiness <small>(monthly)</small></h5>
               <input v-model="data.tardiness" type="number" class="form-control col-3" aria-describedby="tardiness">
-              <h5 class="col-2">x {{ multiplier }}</h5>
+              <h5 class="col-2">x {{ 1 }}</h5>
               <h5 class="text-secondary col-3 pr-0 text-right mb-0">{{ subtotalTardiness | currencyFormat }}</h5>
             </div>
             <div class="row px-0 mt-1">
@@ -386,7 +386,7 @@ export default {
       return (this.data.nightShift || 0) * this.multiplier
     },
     subtotalTardiness() {
-      return (this.data.tardiness || 0) * this.multiplier
+      return (this.data.tardiness || 0) * 1
     },
     subtotalDeminimis() {
       return (this.data.deminimis || 0) * 1
