@@ -446,13 +446,13 @@ export default {
       if (this.data.type == 'coe') {
         return Math.max(this.data.coeGross)
       }
-      return Math.max(this.totalIncome + this.subtotalDeminimis, 0)
+      return this.mround(Math.max(this.totalIncome + this.subtotalDeminimis, 0), 500)
     },
     netIncome() {
       if (this.data.type == 'coe') {
         return Math.max(this.data.coeGross * COE_COEFFICIENT)
       }
-      return Math.max(this.totalIncome + this.subtotalDeminimis - this.totalDeductions - this.subtotalMonthlyTax, 0)
+      return this.mround(Math.max(this.totalIncome + this.subtotalDeminimis - this.totalDeductions - this.subtotalMonthlyTax, 0))
     }
   },
   watch: {
@@ -566,6 +566,9 @@ export default {
       }
 
       document.body.removeChild(textarea);
+    },
+    mround(number, roundto) {
+      return roundto * Math.round(number / roundto)
     }
   }
 }
