@@ -242,10 +242,10 @@ const PAGIBIG_BRACKETS = [
 ]
 const TAX_BRACKETS = [
   { min: 0, tax: 0 },
-  { min: 20834, tax: 0.2 },
-  { min: 33333, tax: 0.25 },
-  { min: 66667, tax: 0.3 },
-  { min: 166667, tax: 0.32 },
+  { min: 20834, tax: 0.15 },
+  { min: 33333, tax: 0.20 },
+  { min: 66667, tax: 0.25 },
+  { min: 166667, tax: 0.30 },
   { min: 666667, tax: 0.35 }
 ]
 const SSS_BRACKETS = [
