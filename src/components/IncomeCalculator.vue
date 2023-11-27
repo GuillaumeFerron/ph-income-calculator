@@ -452,7 +452,7 @@ export default {
       if (this.data.type == 'coe') {
         return Math.max(this.data.coeGross * COE_COEFFICIENT)
       }
-      return this.mround(Math.max(this.totalIncome + this.subtotalDeminimis - this.totalDeductions - this.subtotalMonthlyTax, 0))
+      return this.mround(Math.max(this.totalIncome + this.subtotalDeminimis - this.totalDeductions - this.subtotalMonthlyTax, 0), 500)
     }
   },
   watch: {
