@@ -371,7 +371,7 @@ export default {
       return [...this.data.otherDeductions.filter(_ => _ != null && _ != 0), null]
     },
     pagibig() {
-      return Math.min(PAGIBIG_BRACKETS.sort((a, b) => b.min - a.min).find(_ => this.subtotalSalary >= _.min).pagibig * this.subtotalSalary, 100).toFixed(2)
+      return Math.min(PAGIBIG_BRACKETS.sort((a, b) => b.min - a.min).find(_ => this.subtotalSalary >= _.min).pagibig * this.subtotalSalary, 200).toFixed(2)
     },
     philhealth() {
       return Math.max(Math.min(this.data.salary * 0.05 / 2, 1600 / this.multiplier), 225 / this.multiplier).toFixed(2)
